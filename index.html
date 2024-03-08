@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Redirect Dashboard</title>
+    <style>
+        body {
+            background-color: #000; /* Black background color */
+            color: #fff; /* White text color */
+            font-family: Arial, sans-serif; /* Default font family */
+        }
+
+        h1 {
+            color: #ff0066; /* Neon red font color */
+            font-family: "Courier New", monospace; /* Custom font family for h1 */
+        }
+
+        p {
+            color: #ffcc00; /* Neon brown font color */
+            font-family: "Arial Black", sans-serif; /* Custom font family for p */
+        }
+
+        /* Styling for arrow icon button */
+        .arrow-button {
+            background-color: grey; /* Button background color */
+            color: white; /* Button text color */
+            border: none; /* Remove button border */
+            padding: 10px 20px; /* Button padding */
+            cursor: pointer; /* Cursor style */
+            border-radius: 5px; /* Button border radius */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        /* Styling for arrow icon */
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid white;
+        }
+
+        /* Animation for select */
+        @keyframes selectAnimation {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Apply animation on select */
+        select {
+            animation: selectAnimation 0.5s ease;
+            color: #ffcc00; /* Neon brown text color */
+            font-family: "Impact", sans-serif; /* Change font family */
+            border: 1px solid red; /* Add border with red color */
+            border-radius: 5px; /* Border radius */
+            background-color: #000; /* Dropdown background color */
+        }
+
+        /* Style options 1 to 6 */
+        option:nth-child(-n+6) {
+            color: #ffcc00; /* Neon brown text color */
+            background-color: #000; /* Set background color to match the dropdown */
+            animation: selectAnimation 0.5s ease; /* Apply animation */
+        }
+
+        /* Hover effect on options */
+        option:nth-child(-n+6):hover {
+            background-color: #222; /* Darker background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>KAPE LAH GAPOY UGIPAN</h1>
+    <p>PILI KALA:</p>
+    <select id="websiteSelect">
+        <option value="">antoy kwality dya</option>
+        <option value="https://www.pornhub.com/">Kopiko Brown</option>
+        <option value="https://pinayflixtv.com/">Nescafe Creamy White</option>
+        <option value="https://porndude.link/xvideos/">Great Taste White</option>
+        <option value="https://beeg.com//">Cafe Mocha</option>
+        <option value="https://xhamster.com/?ref=porndude/">Kape</option>
+        <!-- Add more options as needed -->
+    </select>
+    <!-- Arrow icon button -->
+    <button class="arrow-button" onclick="redirect()">
+        Go <span class="arrow"></span>
+    </button>
+
+    <script>
+        function redirect() {
+            var websiteUrl = document.getElementById("websiteSelect").value;
+            if (websiteUrl !== "") {
+                window.location.href = websiteUrl;
+            } else {
+                alert("Pili kay sakey.");
+            }
+        }
+    </script>
+</body>
+</html>
